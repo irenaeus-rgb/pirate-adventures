@@ -403,20 +403,18 @@ footer a:hover {
 
 <script>
 function pirateDownload(file, filename) {
-    const code = prompt("🏴‍☠️ ΑΛΤ! ΤΙΣ ΕΙ; Πειρατικό check!\nΠες το μαγικό μυστικό για να περάσεις:");
 
-    const secret = "gold";
+    alert(
+        "🏴‍☠️ Καλή τύχη μικρέ πειρατή!\nΤο ταξίδι προς τον θησαυρό ξεκινά!"
+    );
 
-    if (code === secret) {
-        const a = document.createElement("a");
-        a.href = file;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    } else {
-        alert("☠️ Λάθος κωδικός! Οι γλάροι σε πρόδωσαν!");
-    }
+    const a = document.createElement("a");
+    a.href = file;
+    a.download = filename;
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
 </script>
 <body>
